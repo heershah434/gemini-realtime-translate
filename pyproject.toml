@@ -1,0 +1,47 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "livekit-plugins-gemini-translate"
+version = "1.0.0"
+description = "LiveKit Agents plugin for Google Gemini Live realtime translation"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.10"
+
+authors = [
+    { name = "Heer Shah" }
+]
+
+keywords = [
+    "livekit",
+    "google",
+    "gemini",
+    "translation",
+    "realtime",
+    "voice",
+    "audio"
+]
+
+classifiers = [
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3 :: Only",
+]
+
+dependencies = [
+    "livekit-agents>=1.5.4",
+    "livekit-plugins-google>=1.5.4",
+    "google-genai>=1.55",
+]
+
+[project.urls]
+Repository = "https://github.com/heershah434/gemini-realtime-translate"
+
+[tool.hatch.build.targets.wheel]
+packages = ["livekit"]
+
+[tool.hatch.build.targets.sdist]
+include = ["/livekit"]
